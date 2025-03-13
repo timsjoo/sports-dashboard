@@ -11,9 +11,12 @@ importers:
       '@fastify/cors':
         specifier: ^11.0.0
         version: 11.0.0
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       drizzle-orm:
         specifier: ^0.40.0
-        version: 0.40.0(@types/pg@8.11.11)(gel@2.0.1)(pg@8.14.0)
+        version: 0.40.0(@types/pg@8.11.11)(gel@2.0.1)(pg@8.14.0)(postgres@3.4.5)
       fastify:
         specifier: ^5.2.1
         version: 5.2.1
@@ -32,9 +35,15 @@ importers:
       pino-pretty:
         specifier: ^13.0.0
         version: 13.0.0
+      postgres:
+        specifier: ^3.4.5
+        version: 3.4.5
       zennv:
         specifier: ^0.1.1
         version: 0.1.1
+      znv:
+        specifier: ^0.4.0
+        version: 0.4.0(zod@3.24.2)
       zod:
         specifier: ^3.24.2
         version: 3.24.2
@@ -1050,6 +1059,10 @@ packages:
   postgres-range@1.1.4:
     resolution: {integrity: sha512-i/hbxIE9803Alj/6ytL7UHQxRvZkI9O4Sy+J3HGc4F4oo/2eQAjTSNJ0bfxyse3bH0nuVesCk+3IRLaMtG3H6w==}
 
+  postgres@3.4.5:
+    resolution: {integrity: sha512-cDWgoah1Gez9rN3H4165peY9qfpEo+SA61oQv65O3cRUE1pOEoJWwddwcqKE8XZYjbblOJlYDlLV4h67HrEVDg==}
+    engines: {node: '>=12'}
+
   process-warning@4.0.1:
     resolution: {integrity: sha512-3c2LzQ3rY9d0hc1emcsHhfT9Jwz0cChib/QN89oME2R451w5fy3f0afAhERFZAwrbDU43wk12d0ORBpDVME50Q==}
 
@@ -1204,6 +1217,11 @@ packages:
   zennv@0.1.1:
     resolution: {integrity: sha512-yAszZBjMYY97kuQ7pVQm5FLz/amtOpzyyhaF7+CwdJZ3Kz9f60pLy2LRqygdcWcV3LcxsUcngfWXxk5ZO98XRQ==}
     engines: {node: '>=10'}
+
+  znv@0.4.0:
+    resolution: {integrity: sha512-6/pGsQhBisLzKdyC90mUCRgYDtCfQ4aQ68sDybexq3GMzqqkp662GH6qIyuCHJC1i72hJPHbWAhccTJVuZUQfA==}
+    peerDependencies:
+      zod: ^3.13.2
 
   zod-to-json-schema@3.24.3:
     resolution: {integrity: sha512-HIAfWdYIt1sssHfYZFCXp4rU1w2r8hVVXYIlmoa0r0gABLs5di3RCqPU5DDROogVz1pAdYBaz7HK5n9pSUNs3A==}
@@ -1624,11 +1642,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.40.0(@types/pg@8.11.11)(gel@2.0.1)(pg@8.14.0):
+  drizzle-orm@0.40.0(@types/pg@8.11.11)(gel@2.0.1)(pg@8.14.0)(postgres@3.4.5):
     optionalDependencies:
       '@types/pg': 8.11.11
       gel: 2.0.1
       pg: 8.14.0
+      postgres: 3.4.5
 
   ecdsa-sig-formatter@1.0.11:
     dependencies:
@@ -2077,6 +2096,8 @@ snapshots:
 
   postgres-range@1.1.4: {}
 
+  postgres@3.4.5: {}
+
   process-warning@4.0.1: {}
 
   pump@3.0.2:
@@ -2196,6 +2217,11 @@ snapshots:
   zennv@0.1.1:
     dependencies:
       dotenv: 16.4.7
+      zod: 3.24.2
+
+  znv@0.4.0(zod@3.24.2):
+    dependencies:
+      colorette: 2.0.20
       zod: 3.24.2
 
   zod-to-json-schema@3.24.3(zod@3.24.2):
