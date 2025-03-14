@@ -12,7 +12,7 @@ const main = async () => {
   const app = await buildServer();
 
   await app.listen({
-    port: 3000,
+    port: 8000,
     host: "localhost",
   });
 
