@@ -8,5 +8,7 @@ export const env = parseEnv(process.env, {
   SERVER_HOST: z.string().default("localhost"),
   TANK01_NBA_API_KEY: z.string(),
   TANK01_NBA_API_HOST: z.string(),
+  UPSTASH_REDIS_URL: z.string(),
+  UPSTASH_REDIS_TOKEN: z.string(),
   DATABASE_URL: z.string(),
 });

@@ -19,7 +19,7 @@ const main = async () => {
 
   const signals = ["SIGINT", "SIGTERM"];
 
-  app.log.info("Server is running");
+  app.log.info(env);
 
   for (const signal of signals) {
     process.on(signal, async () => {
