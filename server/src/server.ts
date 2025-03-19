@@ -11,6 +11,8 @@ export const buildServer = async () => {
         "TANK01_NBA_API_HOST",
         "UPSTASH_REDIS_URL",
         "UPSTASH_REDIS_TOKEN",
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL"
       ],
       level: "debug",
       transport: {
